@@ -8,7 +8,7 @@ const activeSection = ref("hero");
 
 const menuItems = [
   { label: "Home", href: "#hero" },
-  { label: "Menus", href: "#featured" },
+  { label: "Menus", href: "#menus" },
   { label: "About Us", href: "#about" },
   { label: "Reviews", href: "#reviews" },
   { label: "Franchise", href: "#franchise" },
@@ -18,7 +18,7 @@ const menuItems = [
 function onScroll() {
   const sections = [
     "hero",
-    "featured",
+    "menus",
     "about",
     "reviews",
     "franchise",
@@ -52,7 +52,7 @@ onUnmounted(() => window.removeEventListener("scroll", onScroll));
       <div class="flex h-16 md:h-20">
         <div class="w-full flex flex-wrap items-center justify-between gap-8">
           <NuxtLink to="/" class="flex items-center gap-2 group">
-            <img src="/assets/images/logo.webp" />
+            <img src="/assets/images/logo.webp" alt="Howya Logo" />
           </NuxtLink>
           <button
             class="lg:hidden p-2.5 rounded-xl transition-all duration-300 text-gray-600"

@@ -3,7 +3,7 @@
     <Navbar />
     <main>
       <HeroSection />
-      <FeaturedDrinks />
+      <Menus />
       <WhyChooseUs />
       <PromotionBanner />
       <Categories />
