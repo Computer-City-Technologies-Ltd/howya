@@ -3,6 +3,7 @@
     <Navbar />
     <main>
       <HeroSection />
+      <BanglaTaiwan />
       <Menus />
       <WhyChooseUs />
       <PromotionBanner />

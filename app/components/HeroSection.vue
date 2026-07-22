@@ -241,7 +241,7 @@
               <div
                 class="relative w-72 h-72 sm:w-80 sm:h-80 md:w-[28rem] md:h-[28rem]"
               >
-                <img src="/assets/images/mascot.webp" />
+                <img class="brightness-150" src="/assets/images/mascot.webp" />
 
                 <div
                   class="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-gradient-to-br from-primary-400 to-pink-500 flex items-center justify-center shadow-xl shadow-primary-500/40 animate-pulse-glow"

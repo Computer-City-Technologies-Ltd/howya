@@ -1,3 +1,82 @@
+<script setup>
+const drinks = [
+  {
+    image:
+      "https://images.unsplash.com/photo-1558857563-b371033873b8?w=600&h=600&fit=crop&auto=format",
+    name: "Brown Sugar Milk Tea",
+    description:
+      "Handmade boba pearls with rich brown sugar syrup and fresh milk",
+    price: "6.99",
+    rating: 4.9,
+    spice: "Mild",
+    favorited: true,
+    fallback: "from-amber-200 to-amber-100",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1639927663411-35f23bb792b7?w=600&h=600&fit=crop&auto=format",
+    name: "Strawberry Bliss",
+    description:
+      "Fresh strawberry puree with creamy milk and strawberry popping pearls",
+    price: "7.49",
+    rating: 4.8,
+    spice: "Mild",
+    favorited: false,
+    fallback: "from-pink-200 to-pink-100",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1734770580735-796a00e42cb2?w=600&h=600&fit=crop&auto=format",
+    name: "Mango Fruit Tea",
+    description: "Sweet mango puree with coconut jelly and green tea base",
+    price: "7.99",
+    rating: 4.9,
+    spice: "Medium",
+    favorited: false,
+    fallback: "from-yellow-200 to-yellow-100",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600&h=600&fit=crop&auto=format",
+    name: "Taro Milk Tea",
+    description:
+      "Creamy taro root with chewy boba pearls and a hint of vanilla",
+    price: "7.29",
+    rating: 4.7,
+    spice: "Mild",
+    favorited: true,
+    fallback: "from-purple-200 to-purple-100",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1718065598477-505b9c2e764d?w=600&h=600&fit=crop&auto=format",
+    name: "Taro Milk Tea",
+    description:
+      "Creamy taro root with chewy boba pearls and a hint of vanilla",
+    price: "7.29",
+    rating: 4.7,
+    spice: "Mild",
+    favorited: true,
+    fallback: "from-purple-200 to-purple-100",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1558857563-b371033873b8?w=600&h=600&fit=crop&auto=format",
+    name: "Taro Milk Tea",
+    description:
+      "Creamy taro root with chewy boba pearls and a hint of vanilla",
+    price: "7.29",
+    rating: 4.7,
+    spice: "Mild",
+    favorited: true,
+    fallback: "from-purple-200 to-purple-100",
+  },
+];
+
+function onImgError(event, drink) {
+  event.target.style.display = "none";
+}
+</script>
 <template>
   <section id="menus" class="relative py-20 md:py-32 overflow-hidden">
     <div
@@ -109,7 +188,7 @@
               {{ drink.name }}
             </h3>
             <span class="font-display text-lg font-bold text-gradient"
-              >${{ drink.price }}</span
+              >{{ drink.price }} Tk</span
             >
           </div>
           <p class="text-sm text-gray-500 mb-4 line-clamp-2">
@@ -130,107 +209,9 @@
               />
               <span class="text-xs text-gray-400">{{ drink.spice }}</span>
             </div>
-            <button
-              class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 bg-primary-50 text-primary-600 hover:bg-primary-500 hover:text-white hover:shadow-lg hover:shadow-primary-500/30"
-            >
-              <svg
-                class="w-4 h-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-                />
-              </svg>
-              Add to Cart
-            </button>
           </div>
         </div>
       </div>
     </div>
   </section>
 </template>
-
-<script setup>
-const drinks = [
-  {
-    image:
-      "https://images.unsplash.com/photo-1558857563-b371033873b8?w=600&h=600&fit=crop&auto=format",
-    name: "Brown Sugar Milk Tea",
-    description:
-      "Handmade boba pearls with rich brown sugar syrup and fresh milk",
-    price: "6.99",
-    rating: 4.9,
-    spice: "Mild",
-    favorited: true,
-    fallback: "from-amber-200 to-amber-100",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1639927663411-35f23bb792b7?w=600&h=600&fit=crop&auto=format",
-    name: "Strawberry Bliss",
-    description:
-      "Fresh strawberry puree with creamy milk and strawberry popping pearls",
-    price: "7.49",
-    rating: 4.8,
-    spice: "Mild",
-    favorited: false,
-    fallback: "from-pink-200 to-pink-100",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1734770580735-796a00e42cb2?w=600&h=600&fit=crop&auto=format",
-    name: "Mango Fruit Tea",
-    description: "Sweet mango puree with coconut jelly and green tea base",
-    price: "7.99",
-    rating: 4.9,
-    spice: "Medium",
-    favorited: false,
-    fallback: "from-yellow-200 to-yellow-100",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600&h=600&fit=crop&auto=format",
-    name: "Taro Milk Tea",
-    description:
-      "Creamy taro root with chewy boba pearls and a hint of vanilla",
-    price: "7.29",
-    rating: 4.7,
-    spice: "Mild",
-    favorited: true,
-    fallback: "from-purple-200 to-purple-100",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1718065598477-505b9c2e764d?w=600&h=600&fit=crop&auto=format",
-    name: "Taro Milk Tea",
-    description:
-      "Creamy taro root with chewy boba pearls and a hint of vanilla",
-    price: "7.29",
-    rating: 4.7,
-    spice: "Mild",
-    favorited: true,
-    fallback: "from-purple-200 to-purple-100",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1558857563-b371033873b8?w=600&h=600&fit=crop&auto=format",
-    name: "Taro Milk Tea",
-    description:
-      "Creamy taro root with chewy boba pearls and a hint of vanilla",
-    price: "7.29",
-    rating: 4.7,
-    spice: "Mild",
-    favorited: true,
-    fallback: "from-purple-200 to-purple-100",
-  },
-];
-
-function onImgError(event, drink) {
-  event.target.style.display = "none";
-}
-</script>
